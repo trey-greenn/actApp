@@ -1,0 +1,147 @@
+/****** Object:  Table [dbo].[ALERTS]    Script Date: 12/03/2025 17:07:42 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ALERTS](
+	[alert_internal_id] [numeric](9, 0) IDENTITY(1,1) NOT NULL,
+	[status_internal_id] [numeric](9, 0) NULL,
+	[deleted] [numeric](1, 0) NOT NULL,
+	[html_file_key] [varchar](max) NULL,
+	[entity_type_id] [numeric](9, 0) NULL,
+	[alert_date] [datetime] NULL,
+	[alert_type_id] [numeric](9, 0) NULL,
+	[status_id] [numeric](9, 0) NULL,
+	[p11] [varchar](50) NULL,
+	[P12] [varchar](50) NULL,
+	[P13] [varchar](50) NULL,
+	[P14] [varchar](50) NULL,
+	[P15] [varchar](50) NULL,
+	[P16] [varchar](50) NULL,
+	[P17] [varchar](50) NULL,
+	[P18] [varchar](50) NULL,
+	[P19] [varchar](50) NULL,
+	[P20] [varchar](50) NULL,
+	[P21] [varchar](50) NULL,
+	[P22] [varchar](50) NULL,
+	[P23] [varchar](50) NULL,
+	[P24] [varchar](50) NULL,
+	[P25] [varchar](50) NULL,
+	[P26] [varchar](50) NULL,
+	[P27] [varchar](50) NULL,
+	[P28] [varchar](50) NULL,
+	[P29] [varchar](50) NULL,
+	[P30] [varchar](50) NULL,
+	[P31] [varchar](255) NULL,
+	[P32] [varchar](255) NULL,
+	[P33] [varchar](255) NULL,
+	[P34] [varchar](255) NULL,
+	[P35] [varchar](255) NULL,
+	[P36] [varchar](255) NULL,
+	[P37] [varchar](255) NULL,
+	[P38] [varchar](255) NULL,
+	[P39] [varchar](255) NULL,
+	[P40] [varchar](255) NULL,
+	[P41] [varchar](255) NULL,
+	[P42] [varchar](255) NULL,
+	[P43] [varchar](255) NULL,
+	[P44] [varchar](255) NULL,
+	[P45] [varchar](255) NULL,
+	[P46] [varchar](255) NULL,
+	[P47] [varchar](255) NULL,
+	[P48] [varchar](255) NULL,
+	[P49] [varchar](4000) NULL,
+	[P50] [varchar](4000) NULL,
+	[is_case] [numeric](1, 0) NULL,
+	[owner_identifier] [varchar](100) NULL,
+	[bunit_identifier] [varchar](50) NULL,
+	[owner_internal_id] [numeric](9, 0) NULL,
+	[bu_internal_id] [numeric](9, 0) NULL,
+	[original_bu_internal_id] [numeric](9, 0) NULL,
+	[fl_archive] [numeric](1, 0) NOT NULL,
+	[fl_read] [numeric](1, 0) NOT NULL,
+	[fl_read_by_owner] [numeric](1, 0) NOT NULL,
+	[last_read_date] [datetime] NULL,
+	[last_read_user_id] [numeric](9, 0) NULL,
+	[last_update_date] [datetime] NULL,
+	[last_update_user_id] [numeric](9, 0) NULL,
+	[closed_date] [datetime] NULL,
+	[create_date] [datetime] NULL,
+	[score] [numeric](4, 0) NULL,
+	[alert_type_version] [varchar](50) NULL,
+	[fl_manual] [numeric](1, 0) NULL,
+	[fl_generated_by_acm] [numeric](1, 0) NULL,
+	[resolution_id] [numeric](9, 0) NULL,
+	[alert_id] [varchar](50) NULL,
+	[alert_type_internal_id] [numeric](9, 0) NULL,
+	[fl_has_attachments] [numeric](1, 0) NULL,
+	[fl_updated_by_acm] [numeric](1, 0) NULL,
+	[entity_id] [varchar](500) NULL,
+	[prev_status_internal_id] [numeric](9, 0) NULL,
+	[fl_encrypted] [numeric](1, 0) NULL,
+	[last_refresh_modifed_date] [varchar](20) NULL,
+	[deadline_date] [datetime] NULL,
+	[highlight_date] [datetime] NULL,
+	[email_date] [datetime] NULL,
+	[auto_esc_status_internal_id] [numeric](9, 0) NULL,
+	[case_count_for_confidential] [numeric](9, 0) NOT NULL,
+	[global_deadline_date] [datetime] NULL,
+	[global_highlight_date] [datetime] NULL,
+	[global_email_date] [datetime] NULL,
+	[global_auto_esc_status_id] [numeric](9, 0) NULL,
+	[rfi_state] [numeric](1, 0) NOT NULL,
+	[fl_has_notes] [numeric](1, 0) NOT NULL,
+	[fl_has_confidential_notes] [numeric](1, 0) NOT NULL,
+	[consolidation_key] [varchar](500) NULL,
+	[hibernate_object_version] [numeric](9, 0) NULL,
+	[fl_doubt] [numeric](1, 0) NULL,
+	[num_existing_entities] [numeric](9, 0) NULL,
+	[alert_name] [varchar](100) NULL,
+	[priority_internal_id] [numeric](9, 0) NULL,
+	[alert_custom_attributes_id] [numeric](15, 0) NULL,
+	[workspace_internal_id] [numeric](15, 0) NULL,
+	[details] [varchar](max) NULL,
+	[entity_identifier] [varchar](255) NULL,
+	[entity_tenant] [varchar](50) NULL,
+	[entity_source] [varchar](50) NULL,
+	[fl_extracted] [numeric](1, 0) NULL,
+	[entity_type] [varchar](50) NULL,
+	[alert_type_ei_version] [varchar](50) NULL,
+	[details_for_search] [varchar](4000) NULL,
+	[new_alert_type_version] [varchar](50) NULL,
+	[new_details] [varchar](4000) NULL,
+ CONSTRAINT [pk7alerts] PRIMARY KEY NONCLUSTERED 
+(
+	[alert_internal_id] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
+
+
+-----------------------------
+/****** Object:  Table [dbo].[ACM_ITEM_ALERT_HISTORY]    Script Date: 12/03/2025 17:26:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ACM_ITEM_ALERT_HISTORY](
+	[STATUS_HISTORY_INTERNAL_ID] [int] NULL,
+	[ITEM_INTERNAL_ID] [int] NULL,
+	[ITEM_IDENTIFIER] [varchar](255) NULL,
+	[FROM_STATUS_IDENTIFIER] [varchar](255) NULL,
+	[FROM_E_STATE] [varchar](255) NULL,
+	[FROM_E_ISSUE] [varchar](255) NULL,
+	[TO_STATUS_IDENTIFIER] [varchar](255) NULL,
+	[TO_E_STATE] [varchar](255) NULL,
+	[TO_E_ISSUE] [varchar](255) NULL,
+	[CREATE_DATE] [date] NULL,
+	[USER_INTERNAL_ID] [int] NULL
+) ON [PRIMARY]
+GO
+

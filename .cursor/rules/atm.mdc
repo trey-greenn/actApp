@@ -1,0 +1,19 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+The goal of the project is to make an app that helps individuals fine tune their actimize models. So a user will open up our website, upload their transaction data, we will run a keras machine learning model in the background to determine which transactions will be flagged as suspicious or not. We want the front end to be NextJS and background processing to be done in python, the training with keras.
+
+Requirements:
+
+Frontend: React/Next.js UI for upload, results display, and metrics.
+
+Backend: Python (Flask or FastAPI) for processing, Keras model training.
+
+Storage: S3 or Firebase for user file uploads.
+
+Database: PostgreSQL or MongoDB for storing user profiles and model metadata.
+
+
+For the MVP, if we can proceed without having to make our Storage or Database, that would be ideal. However, if we cannot, use the simplest strategy to go forward with the least amount of technical set ups and requirements.
